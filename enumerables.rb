@@ -31,12 +31,9 @@ end
 # HINT: you can use * with a string to produce the correct number of 🌶 emoji. 
 # "hello" * 3 == "hellohellohello"
 def print_spicy_foods(spicy_foods)
-
-  chilis = spicy_foods.map do |spicy_food|
-    🌶 * spicy_food[:heat_level]
-  end
+  
   spicy_foods.map do |spicy_food|
-    puts "#{spicy_food[:name]} (#{spicy_food[:cuisine]}) | Heat Level: #{chilis}"
+    puts "#{spicy_food[:name]} (#{spicy_food[:cuisine]}) | Heat Level: #{"🌶"* spicy_food[:heat_level]}"
   end
 end
 
